@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="root" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep.fcms.controller.AttendanceFormController">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="800.0" layoutX="2.0" layoutY="2.0" opacity="0.1" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/background.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="btnBack" fitHeight="35.0" fitWidth="28.0" layoutX="23.0" layoutY="32.0" onMouseClicked="#OnMouseClicked" onMouseEntered="#OnMouseEntered" onMouseExited="#OnMouseExited" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/back.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="btnAddAttendance" fitHeight="208.0" fitWidth="300.0" layoutX="143.0" layoutY="224.0" onMouseClicked="#OnMouseClicked" onMouseEntered="#OnMouseEntered" onMouseExited="#OnMouseExited" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/sign-in.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="btnViewAttendance" fitHeight="216.0" fitWidth="300.0" layoutX="451.0" layoutY="220.0" onMouseClicked="#OnMouseClicked" onMouseEntered="#OnMouseEntered" onMouseExited="#OnMouseExited" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/log.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="124.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Member Attendance">
+         <font>
+            <Font name="Cantarell Bold" size="64.0" />
+         </font>
+      </Text>
+      <Separator layoutX="69.0" layoutY="155.0" prefWidth="700.0" style="-fx-background-color: black;" />
+      <Text fx:id="lblMainText" layoutX="2.0" layoutY="509.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="800.0">
+         <font>
+            <Font name="Cantarell Bold" size="36.0" />
+         </font>
+      </Text>
+      <Text fx:id="lblSubText" layoutX="2.0" layoutY="548.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="800.0">
+         <font>
+            <Font name="Cantarell Regular" size="18.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="root" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep.fcms.controller.WorkoutFormController">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="800.0" layoutX="2.0" layoutY="2.0" opacity="0.1" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/background.jpg" />
+         </image>
+      </ImageView>
+      <Pane layoutX="2.0" prefHeight="603.0" prefWidth="500.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <Text layoutX="13.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Workout ID :">
+               <font>
+                  <Font name="Cantarell Regular" size="18.0" />
+               </font>
+            </Text>
+            <Text layoutX="263.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Member ID :">
+               <font>
+                  <Font name="Cantarell Regular" size="18.0" />
+               </font>
+            </Text>
+            <Text layoutX="263.0" layoutY="152.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Trainer :">
+               <font>
+                  <Font name="Cantarell Regular" size="18.0" />
+               </font>
+            </Text>
+            <Text fx:id="lblWorkoutId" layoutX="135.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WRT0001">
+               <font>
+                  <Font name="Cantarell Regular" size="18.0" />
+               </font>
+            </Text>
+            <JFXTextField fx:id="txtHeight" focusColor="BLACK" layoutX="406.0" layoutY="180.0" prefHeight="31.0" prefWidth="50.0">
+               <font>
+                  <Font name="Cantarell Regular" size="18.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton buttonType="RAISED" layoutX="18.0" layoutY="522.0" onAction="#btnIssueWorkout_OnAction" prefHeight="35.0" prefWidth="443.0" style="-fx-background-color: #000000;" text="Issue Workout" textFill="WHITE">
+               <font>
+                  <Font name="Cantarell Bold" size="18.0" />
+               </font>
+            </JFXButton>
+            <Text layoutX="13.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font name="Cantarell Regular" size="18.0" />
+               </font>
+            </Text>
+            <ImageView fx:id="btnBack" fitHeight="35.0" fitWidth="28.0" layoutX="13.0" layoutY="22.0" onMouseClicked="#btnBack_OnMouseClicked" onMouseEntered="#btnBack_OnMouseEntered" onMouseExited="#btnBack_OnMouseExited" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/back.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="lblMemberId" layoutX="385.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WRT0001">
+               <font>
+                  <Font name="Cantarell Regular" size="18.0" />
+               </font>
+            </Text>
+            <JFXComboBox fx:id="cmbTrainerId" focusColor="BLACK" layoutX="14.0" layoutY="131.0" prefHeight="26.0" prefWidth="206.0" promptText="Trainer ID" />
+            <Text fx:id="lblTrainer" layoutX="345.0" layoutY="152.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WRT0001">
+               <font>
+                  <Font name="Cantarell Regular" size="18.0" />
+               </font>
+            </Text>
+            <Text layoutX="13.0" layoutY="202.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Weight :">
+               <font>
+                  <Font name="Cantarell Regular" size="18.0" />
+               </font>
+            </Text>
+            <Text layoutX="263.0" layoutY="202.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Height :">
+               <font>
+                  <Font name="Cantarell Regular" size="18.0" />
+               </font>
+            </Text>
+            <JFXTextField fx:id="txtWeight" focusColor="BLACK" layoutX="156.0" layoutY="180.0" prefHeight="31.0" prefWidth="50.0">
+               <font>
+                  <Font name="Cantarell Regular" size="18.0" />
+               </font>
+            </JFXTextField>
+            <Text layoutX="205.0" layoutY="202.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kg">
+               <font>
+                  <Font name="Cantarell Regular" size="18.0" />
+               </font>
+            </Text>
+            <Text layoutX="455.0" layoutY="202.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cm">
+               <font>
+                  <Font name="Cantarell Regular" size="18.0" />
+               </font>
+            </Text>
+            <TableView fx:id="tblWorkout" layoutX="17.0" layoutY="356.0" prefHeight="132.0" prefWidth="443.0">
+              <columns>
+                <TableColumn fx:id="colExercise" prefWidth="255.0" text="Exercise" />
+                <TableColumn fx:id="colReps" prefWidth="56.0" text="Reps" />
+                  <TableColumn fx:id="colSets" prefWidth="62.0" text="Sets" />
+                  <TableColumn fx:id="colDelete" prefWidth="69.0" />
+              </columns>
+            </TableView>
+            <Text layoutX="13.0" layoutY="252.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Exercise :">
+               <font>
+                  <Font name="Cantarell Regular" size="18.0" />
+               </font>
+            </Text>
+            <JFXTextField fx:id="txtExercise" editable="false" focusColor="BLACK" layoutX="98.0" layoutY="230.0" prefHeight="31.0" prefWidth="358.0">
+               <font>
+                  <Font name="Cantarell Regular" size="18.0" />
+               </font>
+            </JFXTextField>
+            <Text layoutX="13.0" layoutY="312.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Reps :">
+               <font>
+                  <Font name="Cantarell Regular" size="18.0" />
+               </font>
+            </Text>
+            <JFXTextField fx:id="txtReps" focusColor="BLACK" layoutX="76.0" layoutY="290.0" prefHeight="31.0" prefWidth="50.0">
+               <font>
+                  <Font name="Cantarell Regular" size="18.0" />
+               </font>
+            </JFXTextField>
+            <Text layoutX="143.0" layoutY="312.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sets :">
+               <font>
+                  <Font name="Cantarell Regular" size="18.0" />
+               </font>
+            </Text>
+            <JFXTextField fx:id="txtSets" focusColor="BLACK" layoutX="206.0" layoutY="290.0" prefHeight="31.0" prefWidth="50.0">
+               <font>
+                  <Font name="Cantarell Regular" size="18.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton buttonType="RAISED" layoutX="282.0" layoutY="294.0" onAction="#btnAddToTable_OnAction" prefHeight="35.0" prefWidth="176.0" style="-fx-background-color: #ffffff;" text="Add to Table">
+               <font>
+                  <Font name="Cantarell Bold" size="18.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </Pane>
+      <TableView fx:id="tblExercise" layoutX="527.0" layoutY="88.0" prefHeight="467.0" prefWidth="250.0">
+        <columns>
+          <TableColumn fx:id="colExerciseList" prefWidth="249.0" text="Exercise" />
+        </columns>
+      </TableView>
+      <JFXTextField fx:id="txtSearch" focusColor="BLACK" layoutX="527.0" layoutY="36.0" prefHeight="31.0" prefWidth="250.0" promptText="Search">
+         <font>
+            <Font name="Cantarell Regular" size="18.0" />
+         </font>
+      </JFXTextField>
+   </children>
+</AnchorPane>

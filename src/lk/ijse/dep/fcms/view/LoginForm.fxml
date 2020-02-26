@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="root" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #F4FCEF;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep.fcms.controller.LoginFormController">
+   <children>
+      <Pane prefHeight="600.0" prefWidth="400.0" style="-fx-background-color: white;">
+         <children>
+            <ImageView fitHeight="600.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/banner-bg.fsd.jpg" />
+               </image>
+            </ImageView>
+            <Text fill="WHITE" layoutX="56.0" layoutY="109.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.2" text="Health First">
+               <font>
+                  <Font name="Cantarell Bold" size="54.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="53.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.5" text="Gymnasium &amp; Fitness Center">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutX="401.0" prefHeight="600.0" prefWidth="400.0" style="-fx-background-color: white;">
+         <children>
+            <Text layoutX="139.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login">
+               <font>
+                  <Font name="Cantarell Bold" size="48.0" />
+               </font>
+            </Text>
+            <Text layoutX="53.0" layoutY="565.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Copyright 2019 IJSE - DEP 4 Version">
+               <font>
+                  <Font name="Cantarell Regular" size="18.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <JFXTextField fx:id="txtUsername" focusColor="BLACK" labelFloat="true" layoutX="451.0" layoutY="189.0" prefHeight="24.0" prefWidth="300.0" promptText="Username">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXPasswordField fx:id="txtPassword" focusColor="BLACK" labelFloat="true" layoutX="451.0" layoutY="259.0" prefHeight="24.0" prefWidth="300.0" promptText="Password">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXPasswordField>
+      <JFXComboBox fx:id="cmbUser" focusColor="BLACK" labelFloat="true" layoutX="451.0" layoutY="336.0" prefHeight="29.0" prefWidth="300.0" promptText="Login as" />
+      <JFXButton buttonType="RAISED" layoutX="451.0" layoutY="422.0" onAction="#btnLogin_OnAction" prefHeight="40.0" prefWidth="300.0" style="-fx-background-color: black;" text="Login" textFill="WHITE">
+         <font>
+            <Font name="Cantarell Bold" size="20.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
